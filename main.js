@@ -50,7 +50,7 @@
   var ticking = false;
 
   var navLinks = Array.prototype.slice.call(doc.querySelectorAll('.nav-links a'));
-  var navSections = ['about', 'work', 'craft', 'contact']
+  var navSections = ['about', 'work', 'experience', 'craft', 'contact']
     .map(function (id) { return doc.getElementById(id); })
     .filter(Boolean);
 
