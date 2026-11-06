@@ -210,81 +210,131 @@
       </div>
 
       <div class="work-stack">
-        <!-- Plate 01 — Noctra Autoworks -->
-        <article class="plate" style="--i:0" aria-labelledby="plate-noctra">
-          <div class="plate__content" data-reveal>
-            <div class="plate__top"><span data-decode>Build 01</span><span>2026 · Product</span></div>
-            <h3 class="plate__title" id="plate-noctra">Noctra<sup>autoworks</sup></h3>
-            <p class="plate__dek">A workshop operating system for a premium motorcycle refinishing studio — public intake, CRM, stock ledger, project costing, invoicing, and P&amp;L in one place. Built to replace spreadsheets with a system the owner can trust.</p>
-            <dl class="plate__meta">
-              <div><dt>Role</dt><dd>Architecture + full-stack</dd></div>
-              <div><dt>Stack</dt><dd>FastAPI · PostgreSQL · HTMX</dd></div>
-              <div><dt>Focus</dt><dd>Workshop operations</dd></div>
-              <div><dt>Year</dt><dd>2026</dd></div>
-            </dl>
-            <div class="plate__foot">
-              <ul class="tags" aria-label="Disciplines"><li>Public site</li><li>CRM</li><li>Inventory</li><li>Costing</li></ul>
-              <a class="plate__link" href="#contact">Ask about Noctra
+        <!-- Case 01 — Noctra Autoworks -->
+        <article class="case" style="--i:0" aria-labelledby="case-noctra">
+          <div class="case__text" data-reveal>
+            <div class="case__eyebrow">
+              <span data-decode>Build 01</span>
+              <i class="case__line" aria-hidden="true"></i>
+              <span>2026 · Product</span>
+            </div>
+
+            <h3 class="case__title" id="case-noctra">Noctra</h3>
+            <p class="case__sub">autoworks · workshop operating system</p>
+
+            <p class="case__dek">One system for a premium motorcycle refinishing studio: the public site that takes the booking, and the back office that prices, stocks, invoices and reports on it. It replaced a folder of spreadsheets with a data model the owner actually trusts.</p>
+
+            <div class="case__block">
+              <span class="case__blocklabel">Modules shipped</span>
+              <ul class="case__modules">
+                <li>Public intake &amp; quotes</li>
+                <li>CRM &amp; vehicle records</li>
+                <li>Stock &amp; materials ledger</li>
+                <li>Project costing &amp; margin</li>
+                <li>Invoicing &amp; payments</li>
+                <li>P&amp;L and pricing analytics</li>
+              </ul>
+            </div>
+
+            <div class="case__foot">
+              <span class="case__stack">FastAPI · SQLAlchemy · PostgreSQL · HTMX</span>
+              <a class="case__link" href="#contact">Ask about Noctra
                 <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 12 12 4M6 4h6v6"/></svg>
               </a>
             </div>
           </div>
-          <div class="plate__art">
-            <div class="art art--noctra" role="img" aria-label="Two browser windows showing the Noctra Autoworks public site and its operations dashboard">
-              <div class="shot-stack" aria-hidden="true">
-                <figure class="shot-window shot-window--back">
-                  <div class="shot-window__bar"><span class="shot-dots"><i></i><i></i><i></i></span><em>noctra / public site</em></div>
-                  <img src="assets/noctra-landing.webp" alt="" width="900" height="764" loading="lazy" decoding="async">
-                </figure>
-                <figure class="shot-window shot-window--front">
-                  <div class="shot-window__bar"><span class="shot-dots"><i></i><i></i><i></i></span><em>noctra / operations</em></div>
-                  <img src="assets/noctra-dashboard.webp" alt="" width="1200" height="750" loading="lazy" decoding="async">
-                </figure>
-                <span class="shot-label shot-label--a">Public intake</span>
-                <span class="shot-label shot-label--b">Operations</span>
+
+          <div class="case__media" data-reveal style="--delay:90ms">
+            <figure class="viewer" data-viewer>
+              <div class="viewer__chrome">
+                <span class="viewer__dots" aria-hidden="true"><i></i><i></i><i></i></span>
+                <span class="viewer__route" data-viewer-route>/dashboard</span>
+                <span class="viewer__meta" data-viewer-index>01 / 04</span>
               </div>
-              <span class="art__tag">Fig. 01 — live product</span>
-              <span class="art__caption">Noctra / operations<br>FastAPI · HTMX · PostgreSQL</span>
-            </div>
+              <div class="viewer__stage">
+                <img class="viewer__shot is-on" src="assets/noctra-dashboard.webp" alt="Noctra operations dashboard with navigation for inquiries, customers, vehicles, projects, inventory and finance" width="1280" height="800" loading="lazy" decoding="async" data-route="/dashboard">
+                <img class="viewer__shot" src="assets/noctra-project.webp" alt="Noctra project detail showing selling price, estimated and actual cost, gross margin and billing history" width="1280" height="800" loading="lazy" decoding="async" data-route="/projects/2026-000001">
+                <img class="viewer__shot" src="assets/noctra-customers.webp" alt="Noctra customer directory with status tabs, filters and a lead record" width="1280" height="800" loading="lazy" decoding="async" data-route="/customers">
+                <img class="viewer__shot" src="assets/noctra-portal.webp" alt="Noctra Autoworks public landing page hero" width="1280" height="720" loading="lazy" decoding="async" data-route="/">
+              </div>
+              <figcaption class="viewer__rail" role="tablist" aria-label="Noctra screens">
+                <button class="viewer__tab is-on" role="tab" type="button" aria-selected="true" tabindex="0"><span>01</span>Dashboard</button>
+                <button class="viewer__tab" role="tab" type="button" aria-selected="false" tabindex="-1"><span>02</span>Costing</button>
+                <button class="viewer__tab" role="tab" type="button" aria-selected="false" tabindex="-1"><span>03</span>CRM</button>
+                <button class="viewer__tab" role="tab" type="button" aria-selected="false" tabindex="-1"><span>04</span>Public</button>
+              </figcaption>
+            </figure>
+
+            <dl class="case__spec">
+              <div><dt>Role</dt><dd>Architecture + full-stack</dd></div>
+              <div><dt>Data</dt><dd>PostgreSQL · Alembic</dd></div>
+              <div><dt>Shipped</dt><dd>2026</dd></div>
+            </dl>
           </div>
         </article>
 
-        <!-- Plate 02 — MAG-Rebirth -->
-        <article class="plate" style="--i:1" aria-labelledby="plate-mag">
-          <div class="plate__content" data-reveal>
-            <div class="plate__top"><span data-decode>Build 02</span><span>2024 · Community</span></div>
-            <h3 class="plate__title" id="plate-mag">MAG-Rebirth<sup>rohan online</sup></h3>
-            <p class="plate__dek">A game portal for a Rohan Online community: server information, game content, live rankings, an item mall, registration and login, plus the admin surface behind it. One FastAPI application reading directly from the game's existing MSSQL database.</p>
-            <dl class="plate__meta">
-              <div><dt>Role</dt><dd>Full-stack + integrations</dd></div>
-              <div><dt>Stack</dt><dd>PHP · XAMPP · MSSQL</dd></div>
-              <div><dt>Focus</dt><dd>Community portal</dd></div>
-              <div><dt>Year</dt><dd>2024</dd></div>
-            </dl>
-            <div class="plate__foot">
-              <ul class="tags" aria-label="Disciplines"><li>Portal</li><li>Rankings</li><li>Item mall</li></ul>
-              <a class="plate__link" href="#contact">Ask about the portal
+        <!-- Case 02 — MAG-Rebirth -->
+        <article class="case" style="--i:1" aria-labelledby="case-mag">
+          <div class="case__text" data-reveal>
+            <div class="case__eyebrow">
+              <span data-decode>Build 02</span>
+              <i class="case__line" aria-hidden="true"></i>
+              <span>2024 · Community</span>
+            </div>
+
+            <h3 class="case__title" id="case-mag">MAG-Rebirth</h3>
+            <p class="case__sub">rohan online · player portal &amp; economy</p>
+
+            <p class="case__dek">A portal for a Rohan Online private server, wired straight into the game's own MSSQL database. Players read the realm, register, spend points and check rankings; staff run the same economy from a console behind it.</p>
+
+            <div class="case__block">
+              <span class="case__blocklabel">What it does</span>
+              <ul class="case__modules">
+                <li>Server status &amp; rates</li>
+                <li>News, patch notes, events</li>
+                <li>Registration &amp; login</li>
+                <li>Live rankings</li>
+                <li>Item mall &amp; point ledger</li>
+                <li>Exchange market</li>
+                <li>Staff console &amp; audit trail</li>
+                <li>Client downloads</li>
+              </ul>
+            </div>
+
+            <div class="case__foot">
+              <span class="case__stack">FastAPI · Jinja2 · SQLAlchemy · MSSQL</span>
+              <a class="case__link" href="#contact">Ask about the portal
                 <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 12 12 4M6 4h6v6"/></svg>
               </a>
             </div>
           </div>
-          <div class="plate__art">
-            <div class="art art--mag" role="img" aria-label="MAG-Rebirth Rohan Online portal artwork with a list of portal features">
-              <img class="mag__bg" src="assets/mag-rebirth.webp" alt="" width="1500" height="957" loading="lazy" decoding="async">
-              <div class="mag__veil" aria-hidden="true"></div>
-              <div class="mag__content" aria-hidden="true">
-                <span class="mag__kicker">Community portal / Rohan Online</span>
-                <strong class="mag__title">MAG<span>—</span>REBIRTH</strong>
-                <span class="mag__sub">Rohan Online</span>
-                <ul class="mag__features">
-                  <li><span>01</span>Server information</li>
-                  <li><span>02</span>Live rankings</li>
-                  <li><span>03</span>Item mall</li>
-                </ul>
+
+          <div class="case__media" data-reveal style="--delay:90ms">
+            <figure class="viewer viewer--wide" data-viewer>
+              <div class="viewer__chrome">
+                <span class="viewer__dots" aria-hidden="true"><i></i><i></i><i></i></span>
+                <span class="viewer__route" data-viewer-route>/</span>
+                <span class="viewer__meta" data-viewer-index>01 / 04</span>
               </div>
-              <span class="art__tag">Fig. 02 — community portal</span>
-              <span class="art__caption">MAG-Rebirth / Rohan Online<br>FastAPI · SQLAlchemy · MSSQL</span>
-            </div>
+              <div class="viewer__stage">
+                <img class="viewer__shot is-on" src="assets/rohan-portal.webp" alt="MAG-Rebirth landing page with the Eternal Kingdom hero, realm status and download call to action" width="1280" height="593" loading="lazy" decoding="async" data-route="/">
+                <img class="viewer__shot" src="assets/rohan-mall.webp" alt="MAG-Rebirth item mall showing point balance, category tabs and purchasable costume packages" width="1280" height="595" loading="lazy" decoding="async" data-route="/mall">
+                <img class="viewer__shot" src="assets/rohan-exchange.webp" alt="MAG-Rebirth exchange market with item and character listings beside the account panel and server status" width="1280" height="594" loading="lazy" decoding="async" data-route="/exchange">
+                <img class="viewer__shot" src="assets/rohan-admin.webp" alt="MAG-Rebirth staff console showing realm health, queue counts and operation consoles" width="1280" height="594" loading="lazy" decoding="async" data-route="/admin">
+              </div>
+              <figcaption class="viewer__rail" role="tablist" aria-label="MAG-Rebirth screens">
+                <button class="viewer__tab is-on" role="tab" type="button" aria-selected="true" tabindex="0"><span>01</span>Portal</button>
+                <button class="viewer__tab" role="tab" type="button" aria-selected="false" tabindex="-1"><span>02</span>Item mall</button>
+                <button class="viewer__tab" role="tab" type="button" aria-selected="false" tabindex="-1"><span>03</span>Exchange</button>
+                <button class="viewer__tab" role="tab" type="button" aria-selected="false" tabindex="-1"><span>04</span>Staff</button>
+              </figcaption>
+            </figure>
+
+            <dl class="case__spec">
+              <div><dt>Role</dt><dd>Full-stack + game integration</dd></div>
+              <div><dt>Data</dt><dd>MSSQL via SQLAlchemy</dd></div>
+              <div><dt>Shipped</dt><dd>2024</dd></div>
+            </dl>
           </div>
         </article>
       </div>
@@ -308,67 +358,87 @@
 
       <div class="xp-intro">
         <h2 data-reveal>Four years, three teams, one <em>thread.</em></h2>
-        <p data-reveal style="--delay:80ms">Every role has been about the same thing: making a business process legible to software — and keeping it that way after launch.</p>
+        <p data-reveal style="--delay:80ms">Every role has been the same job in a different building: make a business process legible to software — then keep it that way after launch.</p>
       </div>
 
-      <div class="xp-list">
-        <article class="xp" data-reveal>
-          <div class="xp__index">
+      <div class="xp-ledger" data-reveal style="--delay:120ms">
+        <div><b data-count="4" data-pad="2">04</b><span>years in production</span></div>
+        <div><b data-count="3" data-pad="2">03</b><span>teams, three cities</span></div>
+        <div><b data-count="2" data-pad="2">02</b><span>sectors: banking, manufacturing</span></div>
+      </div>
+
+      <ol class="xp-timeline">
+        <li class="xp xp--now" data-reveal>
+          <div class="xp__aside">
             <span class="xp__num">01</span>
             <span class="xp__when">Latest role</span>
+            <span class="xp__place">Jakarta, ID</span>
           </div>
-          <div class="xp__body">
-            <div class="xp__head">
+          <article class="xp__card">
+            <header class="xp__head">
               <h3>NTT DATA Indonesia</h3>
-              <span class="xp__role">XSOAR Developer / Technical Engineer</span>
-            </div>
-            <p>Placed on-site at PT Bank Rakyat Indonesia, I built security automation for one of the country's largest banks: Cortex XSOAR playbooks, custom integrations, and the Python services behind them. I also shipped an internal web application on FastAPI, PostgreSQL, and SQLAlchemy — data models, endpoints, authentication, and the interface the team uses to run it.</p>
-            <ul class="tags" aria-label="Technologies"><li>Python</li><li>Cortex XSOAR</li><li>FastAPI</li><li>PostgreSQL</li><li>SQLAlchemy</li></ul>
-          </div>
-          <div class="xp__meta">
-            <span>Jakarta, ID</span>
-            <span>Client — BRI</span>
-          </div>
-        </article>
+              <p class="xp__role">XSOAR Developer / Technical Engineer</p>
+              <span class="xp__chip">On-site — PT Bank Rakyat Indonesia</span>
+            </header>
+            <ul class="xp__points">
+              <li>Wrote Cortex XSOAR playbooks for SOC response flows at one of the largest banks in the country.</li>
+              <li>Built the custom integrations and Python services that feed those playbooks — normalised payloads, retries, idempotent calls.</li>
+              <li>Shipped an internal web application end to end: FastAPI, PostgreSQL schema, SQLAlchemy models, auth, endpoints, interface.</li>
+            </ul>
+            <footer class="xp__foot">
+              <ul class="tags" aria-label="Technologies"><li>Python</li><li>Cortex XSOAR</li><li>FastAPI</li><li>PostgreSQL</li><li>SQLAlchemy</li></ul>
+              <span class="xp__note">Banking · security automation</span>
+            </footer>
+          </article>
+        </li>
 
-        <article class="xp" data-reveal>
-          <div class="xp__index">
+        <li class="xp" data-reveal>
+          <div class="xp__aside">
             <span class="xp__num">02</span>
             <span class="xp__when">Prior role</span>
+            <span class="xp__place">Karawang, ID</span>
           </div>
-          <div class="xp__body">
-            <div class="xp__head">
+          <article class="xp__card">
+            <header class="xp__head">
               <h3>PT Sharp Electronics Indonesia</h3>
-              <span class="xp__role">Software Developer</span>
-            </div>
-            <p>Worked inside a manufacturing operation at scale, building and maintaining internal software for production and administrative teams. The environment taught me discipline: clear requirements, careful releases, and tools that cannot afford to be flaky.</p>
-            <ul class="tags" aria-label="Technologies"><li>Internal tools</li><li>SQL</li><li>Production support</li></ul>
-          </div>
-          <div class="xp__meta">
-            <span>Karawang, ID</span>
-            <span>Manufacturing</span>
-          </div>
-        </article>
+              <p class="xp__role">Software Developer</p>
+              <span class="xp__chip">Manufacturing</span>
+            </header>
+            <ul class="xp__points">
+              <li>Built and maintained internal software used by production and administrative teams on the floor.</li>
+              <li>Learned release discipline the hard way: clear requirements, careful changes, tools that cannot be flaky.</li>
+            </ul>
+            <footer class="xp__foot">
+              <ul class="tags" aria-label="Technologies"><li>Internal tools</li><li>SQL</li><li>Production support</li></ul>
+              <span class="xp__note">Factory systems</span>
+            </footer>
+          </article>
+        </li>
 
-        <article class="xp" data-reveal>
-          <div class="xp__index">
+        <li class="xp" data-reveal>
+          <div class="xp__aside">
             <span class="xp__num">03</span>
             <span class="xp__when">Earlier role</span>
+            <span class="xp__place">Bandung, ID</span>
           </div>
-          <div class="xp__body">
-            <div class="xp__head">
+          <article class="xp__card">
+            <header class="xp__head">
               <h3>PT Sharsys Teknologi Hakiki</h3>
-              <span class="xp__role">Software Developer</span>
-            </div>
-            <p>Built API endpoints and designed the phase-one database for a multi-stage product, then connected the application to Odoo ERP so inventory and business data moved without manual re-entry. My first real lesson in architecture: the schema is the product.</p>
-            <ul class="tags" aria-label="Technologies"><li>Python</li><li>REST APIs</li><li>Odoo ERP</li><li>Database design</li></ul>
-          </div>
-          <div class="xp__meta">
-            <span>Bandung, ID</span>
-            <span>ERP integration</span>
-          </div>
-        </article>
-      </div>
+              <p class="xp__role">Software Developer</p>
+              <span class="xp__chip">ERP integration</span>
+            </header>
+            <ul class="xp__points">
+              <li>Designed the phase-one database and built the API endpoints the rest of the product stood on.</li>
+              <li>Connected the application to Odoo ERP so stock and business data moved without manual re-entry.</li>
+              <li>First real lesson in architecture: the schema is the product.</li>
+            </ul>
+            <footer class="xp__foot">
+              <ul class="tags" aria-label="Technologies"><li>Python</li><li>REST APIs</li><li>Odoo ERP</li><li>Database design</li></ul>
+              <span class="xp__note">Product foundations</span>
+            </footer>
+          </article>
+        </li>
+      </ol>
     </div>
   </section>
 

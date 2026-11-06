@@ -768,7 +768,106 @@
   }
 
   /* ============================================================
-     15 — Console signature
+     15 — Screen viewer: tabbed product screenshots
+     ============================================================ */
+  var DWELL = 6000;
+
+  Array.prototype.forEach.call(doc.querySelectorAll('[data-viewer]'), function (viewer, vIndex) {
+    var shots = Array.prototype.slice.call(viewer.querySelectorAll('.viewer__shot'));
+    var tabs = Array.prototype.slice.call(viewer.querySelectorAll('.viewer__tab'));
+    var stage = viewer.querySelector('.viewer__stage');
+    var routeEl = viewer.querySelector('[data-viewer-route]');
+    var indexEl = viewer.querySelector('[data-viewer-index]');
+
+    if (!shots.length || shots.length !== tabs.length) return;
+
+    var stageId = 'viewer-stage-' + vIndex;
+    if (stage) {
+      stage.id = stageId;
+      stage.setAttribute('role', 'tabpanel');
+    }
+
+    var current = 0;
+    var timer = null;
+    var onScreen = false;
+    var paused = false;
+
+    function pad(n) {
+      return ('0' + n).slice(-2);
+    }
+
+    function stop() {
+      if (timer !== null) window.clearInterval(timer);
+      timer = null;
+    }
+
+    function run() {
+      stop();
+      if (reduceMotion || !onScreen || paused || doc.hidden) return;
+      timer = window.setInterval(function () { show(current + 1, false); }, DWELL);
+    }
+
+    function show(next, moveFocus) {
+      current = (next + shots.length) % shots.length;
+
+      shots.forEach(function (shot, i) { shot.classList.toggle('is-on', i === current); });
+      tabs.forEach(function (tab, i) {
+        var isOn = i === current;
+        tab.classList.toggle('is-on', isOn);
+        tab.setAttribute('aria-selected', isOn ? 'true' : 'false');
+        tab.setAttribute('tabindex', isOn ? '0' : '-1');
+        if (isOn && stage) stage.setAttribute('aria-labelledby', tab.id);
+      });
+
+      var route = shots[current].getAttribute('data-route');
+      if (routeEl && route) routeEl.textContent = route;
+      if (indexEl) indexEl.textContent = pad(current + 1) + ' / ' + pad(shots.length);
+
+      if (moveFocus) tabs[current].focus();
+      run();
+    }
+
+    tabs.forEach(function (tab, i) {
+      tab.id = 'viewer-tab-' + vIndex + '-' + i;
+      tab.setAttribute('aria-controls', stageId);
+      tab.addEventListener('click', function () { show(i, false); });
+    });
+
+    viewer.addEventListener('mouseenter', function () { paused = true; run(); });
+    viewer.addEventListener('mouseleave', function () { paused = false; run(); });
+    viewer.addEventListener('focusin', function () { paused = true; run(); });
+    viewer.addEventListener('focusout', function () {
+      paused = viewer.contains(doc.activeElement);
+      run();
+    });
+
+    var rail = viewer.querySelector('.viewer__rail');
+    if (rail) {
+      rail.addEventListener('keydown', function (event) {
+        var step = event.key === 'ArrowRight' ? 1 : event.key === 'ArrowLeft' ? -1 : 0;
+        if (!step) return;
+        event.preventDefault();
+        var focused = tabs.indexOf(doc.activeElement);
+        show((focused < 0 ? current : focused) + step, true);
+      });
+    }
+
+    if (hasIO) {
+      new IntersectionObserver(function (entries) {
+        onScreen = entries[0].isIntersecting;
+        run();
+      }, { threshold: 0.3 }).observe(viewer);
+    } else {
+      onScreen = true;
+    }
+
+    doc.addEventListener('visibilitychange', run);
+
+    show(0, false);
+  });
+
+  /* ============================================================
+     16 — Console signature
      ============================================================ */
   try {
     console.log(
