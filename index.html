@@ -206,7 +206,7 @@
     <div class="wrap">
       <div class="section-head" data-reveal>
         <span class="label" data-decode>02 — Selected builds</span>
-        <span class="section-head__note">Two products, end to end<br><strong>Schema → screen</strong></span>
+        <span class="section-head__note">Four products, end to end<br><strong>Schema → screen</strong></span>
       </div>
 
       <div class="work-stack">
@@ -337,10 +337,138 @@
             </dl>
           </div>
         </article>
+
+        <!-- Case 03 — InkDesk -->
+        <article class="case" style="--i:2" aria-labelledby="case-inkdesk">
+          <div class="case__text" data-reveal>
+            <div class="case__eyebrow">
+              <span data-decode>Build 03</span>
+              <i class="case__line" aria-hidden="true"></i>
+              <span>2026 · Product</span>
+            </div>
+
+            <h3 class="case__title" id="case-inkdesk">InkDesk</h3>
+            <p class="case__sub">tattoo &amp; piercing studio crm</p>
+
+            <p class="case__dek">A multi-tenant CRM for studios that run one to ten chairs: booking, deposit, signed consent, reminders, aftercare, commission. The whole Phase 1 loop runs with zero third-party keys — fake payments, console email and local storage are real drivers, so the product can be demoed before it can be billed.</p>
+
+            <div class="case__block">
+              <span class="case__blocklabel">Modules shipped</span>
+              <ul class="case__modules">
+                <li>Public booking &amp; slot holds</li>
+                <li>Deposits via Stripe Connect</li>
+                <li>Drag-to-move calendar</li>
+                <li>Client CRM &amp; allergy notes</li>
+                <li>Jurisdiction consent PDFs</li>
+                <li>Reminder &amp; aftercare queue</li>
+                <li>Owner dashboard &amp; reports</li>
+                <li>Plan billing &amp; feature locks</li>
+              </ul>
+            </div>
+
+            <div class="case__foot">
+              <span class="case__stack">Next.js · TypeScript · Prisma · PostgreSQL</span>
+              <a class="case__link" href="#contact">Ask about InkDesk
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 12 12 4M6 4h6v6"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="case__media" data-reveal style="--delay:90ms">
+            <figure class="viewer" data-viewer>
+              <div class="viewer__chrome">
+                <span class="viewer__dots" aria-hidden="true"><i></i><i></i><i></i></span>
+                <span class="viewer__route" data-viewer-route>/dashboard</span>
+                <span class="viewer__meta" data-viewer-index>01 / 04</span>
+              </div>
+              <div class="viewer__stage">
+                <img class="viewer__shot is-on" src="assets/inkdesk-today.webp" alt="InkDesk owner dashboard showing today's chair, monthly deposits, no-show rate and the week ahead" width="1280" height="800" loading="lazy" decoding="async" data-route="/dashboard">
+                <img class="viewer__shot" src="assets/inkdesk-calendar.webp" alt="InkDesk studio calendar with a session on the day grid, drag-to-move help and blocked time panels" width="1280" height="800" loading="lazy" decoding="async" data-route="/calendar">
+                <img class="viewer__shot" src="assets/inkdesk-clients.webp" alt="InkDesk client directory with search, next appointment dates and session counts" width="1280" height="800" loading="lazy" decoding="async" data-route="/clients">
+                <img class="viewer__shot" src="assets/inkdesk-reports.webp" alt="InkDesk reports page with completed work, net deposits, per-artist commission, service mix and deposit ledger" width="1280" height="800" loading="lazy" decoding="async" data-route="/reports">
+              </div>
+              <figcaption class="viewer__rail" role="tablist" aria-label="InkDesk screens">
+                <button class="viewer__tab is-on" role="tab" type="button" aria-selected="true" tabindex="0"><span>01</span>Today</button>
+                <button class="viewer__tab" role="tab" type="button" aria-selected="false" tabindex="-1"><span>02</span>Calendar</button>
+                <button class="viewer__tab" role="tab" type="button" aria-selected="false" tabindex="-1"><span>03</span>Clients</button>
+                <button class="viewer__tab" role="tab" type="button" aria-selected="false" tabindex="-1"><span>04</span>Reports</button>
+              </figcaption>
+            </figure>
+
+            <dl class="case__spec">
+              <div><dt>Role</dt><dd>Architecture + full-stack</dd></div>
+              <div><dt>Data</dt><dd>PostgreSQL · row-level security</dd></div>
+              <div><dt>Shipped</dt><dd>2026</dd></div>
+            </dl>
+          </div>
+        </article>
+
+        <!-- Case 04 — Broadcast Information -->
+        <article class="case" style="--i:3" aria-labelledby="case-broadcast">
+          <div class="case__text" data-reveal>
+            <div class="case__eyebrow">
+              <span data-decode>Build 04</span>
+              <i class="case__line" aria-hidden="true"></i>
+              <span>2023 · Internal</span>
+            </div>
+
+            <h3 class="case__title" id="case-broadcast">Broadcast<br>Information</h3>
+            <p class="case__sub">sharp tv engineering · document broadcast system</p>
+
+            <p class="case__dek">An internal system for TV Engineering at PT Sharp Electronics Indonesia: register a PDF once with its document number, model and type, then broadcast it by email to the divisions that need it — direct and CC. Built on FastAPI and Jinja2 against the old database, keeping the historical table and column names so nothing already stored had to be rewritten.</p>
+
+            <div class="case__block">
+              <span class="case__blocklabel">What it does</span>
+              <ul class="case__modules">
+                <li>PDF upload &amp; validation</li>
+                <li>Document registry &amp; search</li>
+                <li>Recipient lists per division</li>
+                <li>Direct / CC mail types</li>
+                <li>Broadcast over internal relay</li>
+                <li>Session + JWT dual auth</li>
+                <li>Admin and user roles</li>
+                <li>Legacy schema auto-migration</li>
+              </ul>
+            </div>
+
+            <div class="case__foot">
+              <span class="case__stack">FastAPI · SQLAlchemy · Jinja2 · Bootstrap 5</span>
+              <a class="case__link" href="#experience">Built at PT Sharp</a>
+            </div>
+          </div>
+
+          <div class="case__media" data-reveal style="--delay:90ms">
+            <figure class="viewer viewer--wide" data-viewer>
+              <div class="viewer__chrome">
+                <span class="viewer__dots" aria-hidden="true"><i></i><i></i><i></i></span>
+                <span class="viewer__route" data-viewer-route>/login</span>
+                <span class="viewer__meta" data-viewer-index>01 / 04</span>
+              </div>
+              <div class="viewer__stage">
+                <img class="viewer__shot is-on" src="assets/broadcast-login.webp" alt="Broadcast Information sign-in screen branded SHARP TV Engineering, document broadcast system" width="1280" height="596" loading="lazy" decoding="async" data-route="/login">
+                <img class="viewer__shot" src="assets/broadcast-dashboard.webp" alt="Broadcast Information dashboard with document, recipient and account counters, a broadcast panel and recent documents" width="1280" height="593" loading="lazy" decoding="async" data-route="/app">
+                <img class="viewer__shot" src="assets/broadcast-documents.webp" alt="Broadcast Information document registry listing document number, type, model, subject and upload date" width="1280" height="591" loading="lazy" decoding="async" data-route="/app/documents">
+                <img class="viewer__shot" src="assets/broadcast-recipients.webp" alt="Broadcast Information recipient registry with name, email, division and Direct or CC mail type" width="1280" height="590" loading="lazy" decoding="async" data-route="/app/recipients">
+              </div>
+              <figcaption class="viewer__rail" role="tablist" aria-label="Broadcast Information screens">
+                <button class="viewer__tab is-on" role="tab" type="button" aria-selected="true" tabindex="0"><span>01</span>Sign in</button>
+                <button class="viewer__tab" role="tab" type="button" aria-selected="false" tabindex="-1"><span>02</span>Dashboard</button>
+                <button class="viewer__tab" role="tab" type="button" aria-selected="false" tabindex="-1"><span>03</span>Documents</button>
+                <button class="viewer__tab" role="tab" type="button" aria-selected="false" tabindex="-1"><span>04</span>Recipients</button>
+              </figcaption>
+            </figure>
+
+            <dl class="case__spec">
+              <div><dt>Role</dt><dd>Full-stack, internal tooling</dd></div>
+              <div><dt>Data</dt><dd>SQLite · SQLAlchemy 2</dd></div>
+              <div><dt>Shipped</dt><dd>2023</dd></div>
+            </dl>
+          </div>
+        </article>
       </div>
 
       <div class="work__foot" data-reveal>
-        <span>Two builds shown — more in conversation</span>
+        <span>Four builds shown — more in conversation</span>
         <a href="#contact">Ask for the full history
           <svg width="11" height="11" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 12 12 4M6 4h6v6"/></svg>
         </a>
@@ -406,11 +534,12 @@
             </header>
             <ul class="xp__points">
               <li>Built and maintained internal software used by production and administrative teams on the floor.</li>
+              <li>Shipped <em>Broadcast Information</em> for TV Engineering — a document registry that emails ECNs and model authorisations to the divisions that need them.</li>
               <li>Learned release discipline the hard way: clear requirements, careful changes, tools that cannot be flaky.</li>
             </ul>
             <footer class="xp__foot">
-              <ul class="tags" aria-label="Technologies"><li>Internal tools</li><li>SQL</li><li>Production support</li></ul>
-              <span class="xp__note">Factory systems</span>
+              <ul class="tags" aria-label="Technologies"><li>Python</li><li>FastAPI</li><li>SQLAlchemy</li><li>Jinja2</li><li>SQL</li></ul>
+              <span class="xp__note">Manufacturing · internal systems</span>
             </footer>
           </article>
         </li>
@@ -509,7 +638,7 @@
             <span class="tile__num">/ 05</span>
           </div>
           <h3>Front-end delivery</h3>
-          <p>Server-rendered interfaces with Jinja2 and HTMX, responsive CSS, and just enough JavaScript.</p>
+          <p>Server-rendered interfaces with Jinja2 and HTMX, typed React and TypeScript when a product needs it, responsive CSS, and just enough JavaScript.</p>
         </article>
 
         <article class="tile tile--wide" data-tile data-reveal style="--delay:100ms">

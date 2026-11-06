@@ -1249,6 +1249,7 @@ html:not(.js) .viewer__rail{display:none}
   position:relative;padding-left:20px;max-width:74ch;
   font-size:13.5px;line-height:1.72;color:var(--bone-soft);
 }
+.xp__points li em{font-family:var(--serif);font-style:italic;font-weight:400;color:var(--bone)}
 .xp__points li::before{
   content:"";position:absolute;left:0;top:11px;width:9px;height:1px;
   background:rgba(236,233,226,.34);
