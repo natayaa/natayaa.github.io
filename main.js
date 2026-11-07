@@ -867,7 +867,26 @@
   });
 
   /* ============================================================
-     16 — Console signature
+     16 — Visitor counter (GoatCounter)
+     Cookie-free page views. The script only loads when a site code
+     is configured, and never from file:// previews, so local testing
+     cannot pollute the numbers. The dashboard behind it sits behind
+     a login, which is what keeps the counts private.
+     ============================================================ */
+  var counterMeta = doc.querySelector('meta[name="goatcounter"]');
+  var counterCode = counterMeta ? (counterMeta.getAttribute('content') || '').trim() : '';
+  var counterLive = /^https?:$/.test(window.location.protocol);
+
+  if (counterCode && counterLive) {
+    var counterScript = doc.createElement('script');
+    counterScript.async = true;
+    counterScript.src = 'https://gc.zgo.at/count.js';
+    counterScript.setAttribute('data-goatcounter', 'https://' + counterCode + '.goatcounter.com/count');
+    doc.head.appendChild(counterScript);
+  }
+
+  /* ============================================================
+     17 — Console signature
      ============================================================ */
   try {
     console.log(
